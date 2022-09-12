@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const app = express();
 const router = require("find-my-way")();
 
@@ -29,4 +29,16 @@ app.use((req, res, next) => {
 app.listen(3000, (err) => {
   if (err) throw err;
   console.log("Server listening on: http://localhost:3000");
-});
+});*/
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
