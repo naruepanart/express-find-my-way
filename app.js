@@ -3,7 +3,7 @@ const app = express();
 const router = require("find-my-way")();
 
 router.get("/", (req, res, next) => {
-  res.send("ok");
+  res.send("ok workkkk");
 });
 
 router.get("/test", (req, res, next) => {
@@ -18,7 +18,6 @@ app.use("/api", (req, res, next) => {
 
 // main
 app.use((req, res, next) => {
-  console.log("main");
   router.lookup(req, res);
   next();
 });
